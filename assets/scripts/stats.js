@@ -66,7 +66,7 @@ Vue.createApp({
             return fechaEvento > this.fechaActual;
             });
             this.eventosProximos = this.resumirEventos(this.eventosProximos);
-           
+            
             this.eventosPasados = this.eventos.filter(evento => {
                 let fechaEvento = new Date(evento.date);
                 return fechaEvento < this.fechaActual;

@@ -115,6 +115,10 @@ MEDIA QUERIES
         gap: 2rem!important;
     }
 
+    #contenedor-details img{
+        width: 50%!important;
+    }
+
     main{
         min-height: 76.65vh;
     }

@@ -27,21 +27,20 @@ Vue.createApp({
     },
     methods:{
         cargarDatos(){
-            fetch('https://amazing-events.herokuapp.com/api/events')
+            fetch('https://mindhub-xj03.onrender.com/api/amazing')
                 .then(respuesta => respuesta.json())
                 .then(datos => {
+                    
                     this.eventos = datos.events;
                     this.buscarEvento();
                     this.cargarValoresEventoEspecifico();
-                    console.table(this.eventos)
-                    
                     
                 })
                 .catch(e => console.log(e));
         },
         buscarEvento(){
             this.id = new URLSearchParams(document.location.search).get('id');
-            this.eventoEspecifico = this.eventos.find(e => e._id === this.id);
+            this.eventoEspecifico = this.eventos.find(e => e._id == this.id);
         }
         ,
         cargarValoresEventoEspecifico(){
